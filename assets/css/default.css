@@ -1,0 +1,60 @@
+:root {
+    --border-color: #EBEBEB;
+    --item-lv2-color: #EC2028;
+    --white-color: #fff;
+    --text-color: #000;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Cabin', sans-serif;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* GRID */
+.grid {
+    max-width: 1200px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grid__row {
+    display: flex;
+    padding: 0 15px;
+    margin: 0 -30px;
+}
+
+
+/* RESPONSIVE */
+
+@media only screen {
+    .brand-logo {
+        /* background-color: green; */
+    }
+}
+
+@media only screen and (min-width: 901px) {
+    .brand-logo {
+        /* background-color: brown; */
+    }
+
+    .col-lg-1 {
+        width: 100%;
+        padding: 0 15px;
+    }
+}
