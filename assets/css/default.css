@@ -2,7 +2,7 @@
     --border-color: #EBEBEB;
     --item-lv2-color: #EC2028;
     --white-color: #fff;
-    --text-color: #000;
+    --text-color: #323C3F;
 }
 
 * {
@@ -13,6 +13,7 @@
 
 html {
     font-family: 'Cabin', sans-serif;
+    color: var(--text-color);
 }
 
 /* ANIMATION */
@@ -37,6 +38,8 @@ html {
     display: flex;
     padding: 0 15px;
     margin: 0 -30px;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 
@@ -53,8 +56,18 @@ html {
         /* background-color: brown; */
     }
 
-    .col-lg-1 {
+    .col-lg-12 {
         width: 100%;
+        padding: 0 15px;
+    }
+
+    .col-lg-2 {
+        width: calc(100% / 6);
+        padding: 0 15px;
+    }
+
+    .col-lg-2-4 {
+        width: 20%;
         padding: 0 15px;
     }
 }
