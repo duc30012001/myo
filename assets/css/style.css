@@ -191,43 +191,59 @@
     transform: translateX(-50%);
 }
 
+/* SLIDER */
 .products-list {
     position: relative;
-    width: 100%;
-    /* max-width: 1200px; */
-    display: flex;
-    /* justify-content: center; */
-}
-
-#prevBtn {
-    border: none;
-    position: absolute;
-    top: 50%;
-    left: 0px;
-    z-index: 10;
-    /* background-color: transparent; */
-    
-} 
-
-#nextBtn {
-    top: 50%;
-    border: none;
-    position: absolute;
-    right: 0px;
-    z-index: 10;
-}
-
-.btn {
-    /* color: var(--border-color); */
-    font-size: 25px;
-}
-
-.products-list-items {
     width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 20px;
 }
+
+
+.container {
+    width: 4500px;
+    padding: 0 15px;
+    margin: auto;
+    overflow: hidden;
+
+}
+
+.product-slide {
+    display: flex;
+    padding: 0 15px;
+    margin: 0 -30px;
+}
+
+.product-item {
+    width: 100%;
+    padding: 0 15px;
+    cursor: pointer;
+    position: relative;
+}
+
+.product-item:hover .product-overlay, 
+.product-item:hover .list-item-name{
+    display: block;
+    color: var(--item-lv2-color);
+}
+
+.product-overlay {
+    width: 270px;
+    height: 270px;
+    background-color: rgba(255, 255, 255, 0.4);
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    margin-left: 15px;
+    display: none;
+}
+
 
 .item-img {
     width: 100%;
+    position: relative;
 }
 
 
@@ -238,6 +254,7 @@
 
 .list-item-name {
     margin-bottom: 15px;
+    color: var(--text-color);
 }
 
 .list-item-price {
@@ -245,34 +262,29 @@
     font-weight: 700;
 }
 
-/* SLIDER */
-.container {
-    width: 4500px;
-    padding: 0 15px;
-    margin: auto;
-    overflow: hidden;
+#prevBtn {
+    border: none;
+    position: absolute;
+    top: 40%;
+    left: 0px;
+    z-index: 10;
+    color: var(--text-color);
+    
+} 
 
+#nextBtn {
+    top: 40%;
+    border: none;
+    position: absolute;
+    right: 0px;
+    z-index: 10;
+    color: var(--text-color);
 }
 
-.slide {
-    display: flex;
-    padding: 0 15px;
-    margin: 0 -30px;
+.btn {
+    font-size: 25px;
+    background-color: var(--white-color);
 }
-
-.image {
-    width: 100%;
-    padding: 0 15px;
-}
-
-.check {
-    position: relative;
-    width: 1200px;
-    margin: auto;
-    overflow: hidden;
-    margin-top: 20px;
-}
-
 
 /* CATEGORY */
 .category {
