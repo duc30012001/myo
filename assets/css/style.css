@@ -11,14 +11,15 @@
 .nav-bar-container {
     display: flex;
     justify-content: space-between;
-    /* border: 1px solid blue; */
+    position: relative;
 }
 
 .options {
-    display: flex;
+    /* display: flex; */
     font-size: 14px;
     font-weight: 700;
     flex: 1;
+    /* display: inline-block; */
 }
 
 .nav-item-lv1 {
@@ -28,6 +29,7 @@
     height: 50px;
     display: flex;
     align-items: center;
+    z-index: 1;
 }
 
 .nav-item-lv1:hover {
@@ -41,14 +43,14 @@
 
 /* dropdown-menu */
 .dropdown-menu {
+    /* position: relative; */
     position: absolute;
     z-index: 1;
     top: 100%;
     left: 0;
     list-style: none;
     display: none;
-    /* display: block; */
-    animation: fadeIn ease-in 0.2s;
+    animation: fadeIn ease-in .2s;
 }
 
 .nav-item-lv1:hover .dropdown-menu {
@@ -72,12 +74,21 @@
     color: var(--white-color);
 }
 
+/* Extend */
+.extend {
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
 /* Search */
 .search {
     position: relative;
     display: flex;
     align-items: center;
     width: 50px;
+    height: 50px;
     justify-content: center;
     cursor: pointer;
 }
@@ -88,7 +99,6 @@
     width: 280px;
     top: 100%;
     right: 0;
-    /* display: flex; */
     display: none;
     align-items: center;
     padding: 0 8px;
@@ -116,6 +126,7 @@
     display: flex;
     align-items: center;
     width: 50px;
+    height: 50px;
     justify-content: center;
     cursor: pointer;
 }
