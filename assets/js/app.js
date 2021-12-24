@@ -1,9 +1,11 @@
-const productSlide = document.querySelector('.product-slide')
-const productItems = document.querySelectorAll('.product-item')
+const productSlide = document.querySelector('.product-slide');
+const productItems = document.querySelectorAll('.product-item');
+
+
 
 //Buttons
-const preBtn = document.querySelector('#prevBtn');
-const nextBtn = document.querySelector('#nextBtn');
+let preBtn = document.querySelector('#prevBtn');
+let nextBtn = document.querySelector('#nextBtn');
 
 //Counter
 let counter = 4;
@@ -19,8 +21,6 @@ nextBtn.addEventListener('click',()=>{
     productSlide.style.transition = "transform 0.4s ease-in-out";
     counter++;
     productSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-    console.log(counter);
-    console.log(size);
 });
 
 prevBtn.addEventListener('click',()=>{
@@ -33,9 +33,7 @@ prevBtn.addEventListener('click',()=>{
 productSlide.addEventListener('transitionend', ()=>{
     if(productItems[counter].id === 'lastClone') {
         productSlide.style.transition = "none";
-        console.log(counter);
         counter = productItems.length - 5;
-        console.log(counter);
         productSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
     }
     if(productItems[counter].id === 'firstClone') {

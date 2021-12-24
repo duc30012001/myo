@@ -7,7 +7,6 @@ listItem.classList.add('close');
 
 function myFunction() {
     var currentHeight = listItem.clientHeight;
-    console.log(currentHeight);
     listItem.classList.toggle('close');
     listItem.classList.toggle('open');
 }
