@@ -157,6 +157,7 @@ html {
 
     .nav-item-lv2 {
         width: 100%;
+        border: none;
     }
     
     .footer-container {
