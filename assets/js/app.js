@@ -7,9 +7,7 @@ const nextBtn = document.querySelector('#nextBtn');
 
 //Counter
 let counter = 4;
-// const size = products[0].clientWidth;
 const size = productItems[0].clientWidth;
-console.log(size);
 
 // counter++
 productSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
@@ -23,7 +21,6 @@ nextBtn.addEventListener('click',()=>{
     productSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
     console.log(counter);
     console.log(size);
-    // console.log(productItems.length);
 });
 
 prevBtn.addEventListener('click',()=>{
@@ -31,7 +28,6 @@ prevBtn.addEventListener('click',()=>{
     productSlide.style.transition = "transform 0.4s ease-in-out";
     counter--;
     productSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-    // console.log(counter);
 });
 
 productSlide.addEventListener('transitionend', ()=>{
@@ -44,9 +40,7 @@ productSlide.addEventListener('transitionend', ()=>{
     }
     if(productItems[counter].id === 'firstClone') {
         productSlide.style.transition = "none";
-        // console.log(counter);
         counter = productItems.length - counter;
-        // console.log(counter);
         productSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
     }
 })

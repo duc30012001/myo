@@ -10,119 +10,252 @@
     <script src="https://kit.fontawesome.com/347a919724.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" href="./assets/img/web-icon.png">
-    <link rel="stylesheet" href="./assets/css/default.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/default.css">
 </head>
-<body>
+<body id="body">
     <!-- LOGO -->
     <div class="brand-logo">
         <img src="./assets/img/myo-logo.png" alt="">
     </div>
 
+    <button id="bars" class="bars"><i class="fas fa-bars"></i></button>
+
     <!-- NAV BAR -->
     <div id="nav-bar" class="nav-bar grid">
-        <div class="grid__row">
-            <div class="nav-bar-container col-lg-12 col-sm-12">
-                <button id="bars" class="bars"><i class="fas fa-bars"></i></button>
-                <div id="options" class="options close">
-                    <div class="nav-item-lv1 all-clothes">ALL CLOTHES</div>
-                    <div class="nav-item-lv1 tops">
-                        TOPS
-                        <i class="fas fa-caret-down"></i>
-                        <ul class="dropdown-menu">
-                            <li class="nav-item-lv2">T-SHIRT</li>
-                            <li class="nav-item-lv2">POLO</li>
-                            <li class="nav-item-lv2">SHIRT</li>
-                            <li class="nav-item-lv2">SWEATER</li>
-                            <li class="nav-item-lv2">HOODIE</li>
-                            <li class="nav-item-lv2">JACKET</li>
-                        </ul>
-                    </div>
-                    <div class="nav-item-lv1 bottoms">
-                        BOTTOMS
-                        <i class="fas fa-caret-down"></i>
-                        <ul class="dropdown-menu">
-                            <li class="nav-item-lv2">PANTS</li>
-                            <li class="nav-item-lv2">JEAN</li>
-                            <li class="nav-item-lv2">SHORT</li>
-                        </ul>
-                    </div>
-                    <div class="nav-item-lv1 outerwear">
-                        OUTERWEAR
-                        <i class="fas fa-caret-down"></i>
-                        <ul class="dropdown-menu">
-                            <li class="nav-item-lv2">SWEATER</li>
-                            <li class="nav-item-lv2">SHIRT</li>
-                            <li class="nav-item-lv2">HOODIE</li>
-                            <li class="nav-item-lv2">JACKET</li>
-                        </ul>
-                    </div>
-                    <div class="nav-item-lv1 accessories">
-                        ACCESSORIES   
-                        <i class="fas fa-caret-down"></i>   
-                        <ul class="dropdown-menu">
-                            <li class="nav-item-lv2">SOCK</li>
-                            <li class="nav-item-lv2">MASK</li>
-                        </ul>              
-                    </div>
-                    <div class="nav-item-lv1 hot-deal">
-                        HOT DEAL
-                    </div>
-                </div>
+        <div id="options" class="options">
+            <div class="nav-item-lv1 all-clothes">
+                <span>ALL CLOTHES</span> 
+            </div>
+            <div class="nav-item-lv1 tops">
+                <span>
+                    TOPS
+                    <button class="btn-lv1"><i class="fas fa-caret-down"></i></button>
+                </span> 
+                <ul class="dropdown-menu">
+                    <li class="nav-item-lv2">T-SHIRT</li>
+                    <li class="nav-item-lv2">POLO</li>
+                    <li class="nav-item-lv2">SHIRT</li>
+                    <li class="nav-item-lv2">SWEATER</li>
+                    <li class="nav-item-lv2">HOODIE</li>
+                    <li class="nav-item-lv2">JACKET</li>
+                </ul>
+            </div>
+            <div class="nav-item-lv1 bottoms">
+                <span>
+                    BOTTOMS
+                    <button class="btn-lv1"><i class="fas fa-caret-down"></i></button>
+                </span>
+                <ul class="dropdown-menu">
+                    <li class="nav-item-lv2">PANTS</li>
+                    <li class="nav-item-lv2">JEAN</li>
+                    <li class="nav-item-lv2">SHORT</li>
+                </ul>
+            </div>
+            <div class="nav-item-lv1 outerwear">
+                <span>
+                    OUTERWEAR
+                    <button class="btn-lv1"><i class="fas fa-caret-down"></i></button>
+                </span>
+                <ul class="dropdown-menu">
+                    <li class="nav-item-lv2">SWEATER</li>
+                    <li class="nav-item-lv2">SHIRT</li>
+                    <li class="nav-item-lv2">HOODIE</li>
+                    <li class="nav-item-lv2">JACKET</li>
+                </ul>
+            </div>
+            <div class="nav-item-lv1 accessories">
+                <span>
+                    ACCESSORIES
+                    <button class="btn-lv1"><i class="fas fa-caret-down"></i></button> 
+                </span>   
+                <ul class="dropdown-menu">
+                    <li class="nav-item-lv2">SOCK</li>
+                    <li class="nav-item-lv2">MASK</li>
+                </ul>              
+            </div>
+            <div class="nav-item-lv1 hot-deal">
+                <span>HOT DEAL</span>
+            </div>
+        </div>
 
-                <div class="extend">
-                    <div class="search">
-                        <i class="fas fa-search"></i>
-                        <div class="search-option">
-                            <input type="text" class="search-input" placeholder="Tìm kiếm sản phẩm...">
-                            <i class="fas fa-search"></i>
-                        </div>
-                    </div>
-    
-                    <div class="cart">
-                        <i class="fas fa-shopping-bag"></i>
-                        <div class="quantity">0</div>
-                        <div class="cart-list">Không có sản phẩm nào.</div>
-                    </div>
-
+        <div class="extend">
+            <div class="search">
+                <i class="fas fa-search"></i>
+                <div class="search-option">
+                    <input type="text" class="search-input" placeholder="Tìm kiếm sản phẩm...">
+                    <i class="fas fa-search"></i>
                 </div>
             </div>
-
+    
+            <div class="cart">
+                <i class="fas fa-shopping-bag"></i>
+                <div class="quantity">0</div>
+                <div class="cart-list">Không có sản phẩm nào.</div>
+            </div>
         </div>
     </div>
 
     <!-- CONTAINER -->
 
     <!-- New arrival -->
-    <div id="new-arrival" class="products">
-        <H2 class="products-heading">NEW ARRIVAL</H2>
-        <div class="products-list">
-            <i class="btn btn-prev fas fa-chevron-left"></i>
-
-            <i class="btn btn-next fas fa-chevron-right"></i>
+    <div class="products">
+        <h1 class="products-heading">NEW ARRIVAL</h1>
+        <div class="check products-list">
+            <div class="container">
+                <div class="product-slide">
+                    <div class="product-overlay"></div>
+                    <div class="product-item" alt="">
+                        <div class="product-overlay"></div>
+                        <img class="item-img" src="./assets/img/new-arrival/myoxdeath_t-shirt.jpg" alt="">
+                        <div class="list-item-detail">
+                            <p class="list-item-name">MyoXDeath T-Shirt</p>
+                            <span class="list-item-price">390.000 &#8363;</span>
+                        </div>
+                    </div>
+                    <div class="product-item" alt="">
+                        <div class="product-overlay"></div>
+                        <img class="item-img" src="./assets/img/new-arrival/e-butterfly_polo.jpg" alt="">
+                        <div class="list-item-detail">
+                            <p class="list-item-name">Áo E-Butterfly Polo</p>
+                            <span class="list-item-price">270.000 &#8363;</span>
+                        </div>
+                    </div>
+                    <div class="product-item" alt="">
+                        <div class="product-overlay"></div>
+                        <img class="item-img" src="./assets/img/new-arrival/v-money-wash_short.jpg" alt="">
+                        <div class="list-item-detail">
+                            <p class="list-item-name">Quần Short V Money Wash</p>
+                            <span class="list-item-price">260.000 &#8363;</span>
+                        </div>
+                    </div>
+                    <div class="product-item" alt="" id="lastClone">
+                        <div class="product-overlay"></div>
+                        <img class="item-img" src="./assets/img/new-arrival/sleeve-smile_long-tee.jpg" alt="">
+                        <div class="list-item-detail">
+                            <p class="list-item-name">Áo Long Sleeve Tee Smile</p>
+                            <span class="list-item-price">310.000 &#8363;</span>
+                        </div>
+                    </div>
+                    <div class="product-item" alt="">
+                        <div class="product-overlay"></div>
+                        <img class="item-img" src="./assets/img/new-arrival/since-2016_hoodie.jpg" alt="">
+                        <div class="list-item-detail">
+                            <p class="list-item-name">Áo Hoodie SINCE 2016</p>
+                            <span class="list-item-price">330.000 &#8363;</span>
+                        </div>
+                    </div>
+                    <div class="product-item" alt="">
+                        <div class="product-overlay"></div>
+                        <img class="item-img" src="./assets/img/new-arrival/myoxdeath_hoodie.jpg" alt="">
+                        <div class="list-item-detail">
+                            <p class="list-item-name">MYOXDEATH Hoodie</p>
+                            <span class="list-item-price">450.000 &#8363;</span>
+                        </div>
+                    </div>
+                    <div class="product-item" alt="">
+                        <div class="product-overlay"></div>
+                        <img class="item-img" src="./assets/img/new-arrival/myoxdeath_polo.jpg" alt="">
+                        <div class="list-item-detail">
+                            <p class="list-item-name">MYOXDEATH Polo</p>
+                            <span class="list-item-price">390.000 &#8363;</span>
+                        </div>
+                    </div>
+                    <div class="product-item" alt="">
+                        <div class="product-overlay"></div>
+                        <img class="item-img" src="./assets/img/new-arrival/myoxdeath_t-shirt.jpg" alt="">
+                        <div class="list-item-detail">
+                            <p class="list-item-name">MyoXDeath T-Shirt</p>
+                            <span class="list-item-price">390.000 &#8363;</span>
+                        </div>
+                    </div>
+                    <div class="product-item" alt="">
+                        <div class="product-overlay"></div>
+                        <img class="item-img" src="./assets/img/new-arrival/e-butterfly_polo.jpg" alt="">
+                        <div class="list-item-detail">
+                            <p class="list-item-name">Áo E-Butterfly Polo</p>
+                            <span class="list-item-price">270.000 &#8363;</span>
+                        </div>
+                    </div>
+                    <div class="product-item" alt="">
+                        <div class="product-overlay"></div>
+                        <img class="item-img" src="./assets/img/new-arrival/v-money-wash_short.jpg" alt="">
+                        <div class="list-item-detail">
+                            <p class="list-item-name">Quần Short V Money Wash</p>
+                            <span class="list-item-price">260.000 &#8363;</span>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-overlay"></div>
+                        <img class="item-img" src="./assets/img/new-arrival/sleeve-smile_long-tee.jpg" alt="">
+                        <div class="list-item-detail">
+                            <p class="list-item-name">Áo Long Sleeve Tee Smile</p>
+                            <span class="list-item-price">310.000 &#8363;</span>
+                        </div>
+                    </div>
+                    <div class="product-item" alt="" id="firstClone">
+                        <div class="product-overlay"></div>
+                        <img class="item-img" src="./assets/img/new-arrival/since-2016_hoodie.jpg" alt="">
+                        <div class="list-item-detail">
+                            <p class="list-item-name">Áo Hoodie SINCE 2016</p>
+                            <span class="list-item-price">330.000 &#8363;</span>
+                        </div>
+                    </div>
+                    <div class="product-item" alt="">
+                        <div class="product-overlay"></div>
+                        <img class="item-img" src="./assets/img/new-arrival/myoxdeath_hoodie.jpg" alt="">
+                        <div class="list-item-detail">
+                            <p class="list-item-name">MYOXDEATH Hoodie</p>
+                            <span class="list-item-price">450.000 &#8363;</span>
+                        </div>
+                    </div>
+                    <div class="product-item" alt="">
+                        <div class="product-overlay"></div>
+                        <img class="item-img" src="./assets/img/new-arrival/myoxdeath_polo.jpg" alt="">
+                        <div class="list-item-detail">
+                            <p class="list-item-name">MYOXDEATH Polo</p>
+                            <span class="list-item-price">390.000 &#8363;</span>
+                        </div>
+                    </div>
+                    <div class="product-item" alt="">
+                        <div class="product-overlay"></div>
+                        <img class="item-img" src="./assets/img/new-arrival/myoxdeath_t-shirt.jpg" alt="">
+                        <div class="list-item-detail">
+                            <p class="list-item-name">MyoXDeath T-Shirt</p>
+                            <span class="list-item-price">390.000 &#8363;</span>
+                        </div>
+                    </div>  
+                </div>  
+            </div>
+            <button id="prevBtn"><i class="btn fas fa-chevron-left"></i></button>
+            <button id="nextBtn"><i class="btn fas fa-chevron-right"></i></button>
         </div>
-        
     </div>
 
     <!-- CATEGORY -->
     <div class="category">
-        <h3 class="category-heading">CATEGORY</h3>
+        <h2 class="category-heading">CATEGORY</h2>
         <div class="grid">
             <ul class="list grid__row">
-                <a class="item col-lg-2"><img src="./assets/img/brand1.png" alt=""></a>
-                <a class="item col-lg-2"><img src="./assets/img/brand2.png" alt=""></a>
-                <a class="item col-lg-2"><img src="./assets/img/brand3.png" alt=""></a>
-                <a class="item col-lg-2"><img src="./assets/img/brand4.png" alt=""></a>
-                <a class="item col-lg-2"><img src="./assets/img/brand5.png" alt=""></a>
-                <a class="item col-lg-2"><img src="./assets/img/brand7.png" alt=""></a>
+                <a class="item col-lg-2 col-sm-4"><img src="./assets/img/brand1.png" alt=""></a>
+                <a class="item col-lg-2 col-sm-4"><img src="./assets/img/brand2.png" alt=""></a>
+                <a class="item col-lg-2 col-sm-4"><img src="./assets/img/brand3.png" alt=""></a>
+                <a class="item col-lg-2 col-sm-4"><img src="./assets/img/brand4.png" alt=""></a>
+                <a class="item col-lg-2 col-sm-4"><img src="./assets/img/brand5.png" alt=""></a>
+                <a class="item col-lg-2 col-sm-4"><img src="./assets/img/brand7.png" alt=""></a>
             </ul>
         </div>
     </div>
 
+    
+
+    
+    <script src="./assets/js/app.js"></script>
+
     <!-- FOOTER -->
-    <footer class="grid">
+    <footer class="grid footer-container">
         <div class="grid__row">
-            <div class="col-lg-2-4">
+            <div class="col-lg-2-4 col-sm-6">
                 <div class="footer-heading">Sản phẩm</div>
                 <div class="footer-list">
                     <a href="" class="footer-item">ALL CLOTHES</a>
@@ -134,21 +267,37 @@
                 </div>
                 
             </div>
-            <div class="col-lg-2-4">
+            <div class="col-lg-2-4 col-sm-6">
                 <div class="footer-heading">Về chúng tôi</div>
-
+                <div class="footer-list">
+                    <a href="" class="footer-item">Câu Chuyện Về MYO</a>
+                    <a href="" class="footer-item">Giờ Làm Việc</a>
+                    <a href="" class="footer-item">Liên Hệ</a>
+                    <a href="" class="footer-item">Đối tác</a>
+                </div>
             </div>
-            <div class="col-lg-2-4">
+            <div class="col-lg-2-4 col-sm-6">
                 <div class="footer-heading">Hướng dẫn</div>
-
+                <div class="footer-list">
+                    <a href="" class="footer-item">Hướng Dẫn Mua Hàng</a>
+                    <a href="" class="footer-item">Hướng Dẫn Chọn Size</a>
+                    <a href="" class="footer-item">Đổi Trả Và Bảo Hành</a>
+                    <a href="" class="footer-item">Chính Sách Tích Điểm</a>
+                </div>
             </div>
-            <div class="col-lg-2-4">
+            <div class="col-lg-2-4 col-sm-6">
                 <div class="footer-heading">Chính sách</div>
-
+                <div class="footer-list">
+                    <a href="" class="footer-item">Chính Sách Thanh Toán</a>
+                    <a href="" class="footer-item">Chính Sách Vận Chuyển</a>
+                    <a href="" class="footer-item">Chính Sách Đổi Trả</a>
+                    <a href="" class="footer-item">Chính Sách Bảo Hành</a>
+                </div>
             </div>
-            <div class="col-lg-2-4">
-                <div class="footer-heading">Theo dõi chúng thôi</div>
-
+            <div class="contact col-lg-2-4 col-sm-6">
+                <div class="footer-heading">Theo dõi chúng tôi</div>
+                <a href="https://www.facebook.com/vietduc3001/" class="footer-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/viet.duc_/" class="footer-icon"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
     </footer>
